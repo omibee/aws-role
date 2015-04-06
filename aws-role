@@ -58,13 +58,13 @@ else:
     role = awsConfig.get('profile ' + profile, 'arn')
 
 #Run aws commandline tool to get STS credentials
-if os.path.isfile("/usr/bin/aws"):
-    awsReq = subprocess.Popen(["/usr/bin/aws", "sts", "assume-role",
+if os.path.isfile("/usr/local/bin/aws"):
+    awsReq = subprocess.Popen(["/usr/local/bin/aws", "sts", "assume-role",
                                "--role-arn", role, 
                                "--role-session-name", environ['USER']],
                                stdout=subprocess.PIPE)
 else:
-    print("aws commandline tool not found at /usr/bin/aws\n")
+    print("aws commandline tool not found at /usr/local/bin/aws\n")
     exit(1)
 
 awsJSON = json.loads(awsReq.communicate()[0])
