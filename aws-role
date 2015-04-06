@@ -42,7 +42,7 @@ else:
 
 #read the ARN for the associate profile name from the config file
 if not awsConfig.has_section('default'):
-    print("aws config file must have a [default] profile")
+    print("aws config file " + awsConfigFile + " must have a [default] profile")
     exit(1)
 
 if not awsConfig.has_section('profile ' + profile):
