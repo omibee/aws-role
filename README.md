@@ -13,10 +13,10 @@ To use aws-role, you need to have your AWS configuration file specified in your 
     aws_access_key_id = XXXXXXXXXXXXXXXx
     aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    [profile customer1]
+    [customer1]
     region = us-east-1
 
-    [profile customer2]
+    [customer2]
     region = us-east-1
 
 Now, to access the customer1 profile, I run:
