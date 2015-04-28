@@ -53,7 +53,7 @@ if not awsConfig.has_option(profile, 'arn'):
     role = raw_input("ARN: ")
     awsConfig.set(profile, 'arn', role)
     with open(awsConfigFile, 'wb') as configfile:
-  awsConfig.write(configfile)
+        awsConfig.write(configfile)
 else:
     role = awsConfig.get(profile, 'arn')
 
